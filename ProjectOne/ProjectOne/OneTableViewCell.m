@@ -46,7 +46,7 @@
     self.timeLable.backgroundColor = [UIColor blueColor];
     [self.contentView addSubview:self.timeLable];
     
-    self.readLable = [[UILabel alloc] initWithFrame:CGRectMake(KWidth / 8 * 3 - 5 / 4, KWidth / 6, KWidth * 3 / 8, KWidth / 12)];
+    self.readLable = [[UILabel alloc] initWithFrame:CGRectMake(KWidth / 8 * 5 + 5 / 2, KWidth / 6, KWidth * 3 / 8 - 5 / 2, KWidth / 12)];
     self.readLable.backgroundColor = [UIColor yellowColor];
     [self.contentView addSubview:self.readLable];
     
