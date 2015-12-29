@@ -174,7 +174,6 @@
 		7AFDE87E1C3269D30049CF67 /* FiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveModel.h; sourceTree = "<group>"; };
 		7AFDE87F1C3269D30049CF67 /* FiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveModel.m; sourceTree = "<group>"; };
 
->>>>>>> 4c69ffb3c29528d874270b5d08b4ff4a053a91bc
 		7A0C48181C3229F900E68053 /* OneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTableViewCell.h; sourceTree = "<group>"; };
 		7A0C48191C3229F900E68053 /* OneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTableViewCell.m; sourceTree = "<group>"; };
 		7A0C481B1C322A0A00E68053 /* OneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneModel.h; sourceTree = "<group>"; };
