@@ -66,7 +66,8 @@
     if (_content == nil) {
         self.content = [[UILabel alloc]initWithFrame:CGRectMake(0, kWidth / 5, kWidth , kWidth / 4 / 3)];
         self.content.numberOfLines = 0;
-        self.content.font = [UIFont systemFontOfSize:17.0];
+        self.content.font = [UIFont systemFontOfSize:15.0];
+        self.content.textColor = [UIColor grayColor];
     }
     return _content;
 }
@@ -82,10 +83,10 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH-mm-ss"];
     [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/shanghai"]];
-    NSDate *date = [formatter dateFromString:model.date];
+   // NSDate *date = [formatter dateFromString:model.date];
     NSDate *cTime = [formatter dateFromString:model.cTime];
-    NSTimeInterval timeInterval = [cTime timeIntervalSinceDate:date];
-    if (timeInterval > 3600) {
+    NSTimeInterval timeInterval = [cTime timeIntervalSinceNow] * -1;
+    if (timeInterval > 3600 && timeInterval < 3600 * 24) {
          self.date.text = [NSString stringWithFormat:@"%.0f小时前", timeInterval /3600];
     }else if (timeInterval <= 3600 && timeInterval >= 60){
          self.date.text = [NSString stringWithFormat:@"%.0f分钟前", timeInterval /60];
@@ -98,7 +99,7 @@
 }
 
 + (CGFloat)getHeightWithText:(NSString *)text{
-    CGRect rect = [text boundingRectWithSize:CGSizeMake(kWidth, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.0]} context:nil];
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(kWidth, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15.0]} context:nil];
     return rect.size.height;
 }
 
