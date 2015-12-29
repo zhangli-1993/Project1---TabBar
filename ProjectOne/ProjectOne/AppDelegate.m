@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OneViewController.h"
+#import "FourViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    UITabBarController *tab = [[UITabBarController alloc] init];
+    OneViewController *oneVC = [[OneViewController alloc] init];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:oneVC];
+    oneVC.tabBarItem.title = @"张莉";
+    
+    FourViewController *fourVC = [[FourViewController alloc] init];
+    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourVC];
+    fourVC.tabBarItem.title = @"王晓奇";
+    tab.viewControllers = @[nav1, nav4];
+    tab.delegate = self;
+    self.window.rootViewController = tab;
     
     
     
@@ -26,6 +38,15 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    return YES;
+}
+
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

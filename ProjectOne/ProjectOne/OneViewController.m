@@ -7,17 +7,50 @@
 //
 
 #import "OneViewController.h"
-
+#import "OneTableViewCell.h"
 @interface OneViewController ()
-
+@property(nonatomic, retain) UITableView *tableView;
 @end
 
 @implementation OneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"张莉";
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.view addSubview:self.tableView];
+    [self config];
+    
+    
+    
     // Do any additional setup after loading the view.
 }
+
+//解析数据
+- (void)config{
+    
+}
+
+//行数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *str = @"123";
+    OneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+    if (cell == nil) {
+        cell = [[OneTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
+        
+    }
+    return cell;
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
