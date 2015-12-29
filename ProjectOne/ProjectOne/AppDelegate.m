@@ -8,11 +8,11 @@
 
 #import "AppDelegate.h"
 #import "OneViewController.h"
-<<<<<<< HEAD
+
 #import "FourViewController.h"
-=======
+
 #import "TwoViewController.h"
->>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
+
 @interface AppDelegate ()
 
 @end

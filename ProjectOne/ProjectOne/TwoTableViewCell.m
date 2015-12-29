@@ -74,7 +74,17 @@
     return _content;
 }
 - (void)setModel:(TwoModel *)model{
-    
+    self.title.text = model.title;
+    self.content.text = model.content;
+    [self.imageViewTwo sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    self.readerts.text = model.reader;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH-mm-ss"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/shanghai"]];
+    NSDate *date = [formatter dateFromString:model.date];
+    NSDate *cTime = [formatter dateFromString:model.cTime];
+    NSTimeInterval timeInterval = [cTime timeIntervalSinceDate:date];
+    self.date.text = [NSString stringWithFormat:@"%f小时前", timeInterval /3600];
 }
 - (void)awakeFromNib {
     // Initialization code
