@@ -26,7 +26,7 @@
     // Override point for customization after application launch.
 
     FiveViewController *fiveVC = [[FiveViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:fiveVC];
+    UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:fiveVC];
 
     UITabBarController *tab = [[UITabBarController alloc] init];
     OneViewController *oneVC = [[OneViewController alloc] init];
@@ -48,9 +48,9 @@
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
     two.tabBarItem.title = @"王妍";
     two.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
->>>>>>> cbcf492730c3973fcd8d4c61426dcbf466ca3ed0
+
     
-    tab.viewControllers = @[nav1, nav4, nav, nav3];
+    tab.viewControllers = @[nav1, nav4, nav, nav3, nav5];
     tab.delegate = self;
     self.window.rootViewController = tab;
     
