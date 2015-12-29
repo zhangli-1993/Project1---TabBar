@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OneViewController.h"
+#import "TwoViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,8 +20,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    
-    
+    TwoViewController *two = [[TwoViewController alloc]init];
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
