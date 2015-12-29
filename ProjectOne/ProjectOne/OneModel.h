@@ -9,5 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface OneModel : NSObject
+@property(nonatomic, retain) NSString *title1;
+@property(nonatomic, retain) NSString *title2;
+@property(nonatomic, retain) NSString *image;
+@property(nonatomic, retain) NSString *time;
+@property(nonatomic, retain) NSString *read;
+
+
+- (instancetype)initWithDictory:(NSDictionary *)dic;
+
+
 
 @end

@@ -10,6 +10,7 @@
 #import "OneTableViewCell.h"
 @interface OneViewController ()
 @property(nonatomic, retain) UITableView *tableView;
+@property(nonatomic, retain) NSMutableArray *array;
 @end
 
 @implementation OneViewController
@@ -30,12 +31,20 @@
 
 //解析数据
 - (void)config{
-    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"file" ofType:@".plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    self.array = [NSMutableArray new];
+    NSDictionary *dic1 = dic[@"root"];
+    NSArray *arr = dic1[@"list"];
+    for (NSDictionary *dic3 in arr) {
+        OneModel *model = [[OneModel alloc] initWithDictory:dic3];
+        [self.array addObject:model];
+    }
 }
 
 //行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.array.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -43,11 +52,16 @@
     OneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
     if (cell == nil) {
         cell = [[OneTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
-        
     }
+     cell.model = self.array[indexPath.row];
     return cell;
     
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [OneTableViewCell getCellHeight];
+}
+
 
 
 
