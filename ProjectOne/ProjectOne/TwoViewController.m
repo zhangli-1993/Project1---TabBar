@@ -20,25 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"军迷在线";
+    self.navigationController.title = @"军迷在线";
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.separatorColor = [UIColor cyanColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 200;
+    self.tableView.rowHeight = 111;
     [self.view addSubview:self.tableView];
     [self configData];
 }
 - (void)configData{
     NSString *path = [[NSBundle mainBundle]pathForResource:@"file" ofType:@".plist"];
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *listArray = dictionary[@"list"];
+    NSDictionary *diction = dictionary[@"root"];
+    NSArray *listArray = diction[@"list"];
     self.allArray = [NSMutableArray new];
     for (NSDictionary *dic in listArray) {
         TwoModel *model = [[TwoModel alloc]initWithDictionary:dic];
         [self.allArray addObject:model];
     }
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -52,6 +52,7 @@
     if (cell == nil) {
         cell = [[TwoTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
     }
+    cell.model = self.allArray[indexPath.row];
     return cell;
 }
 
