@@ -131,10 +131,16 @@
 		7A7350C61C3227300084EB9C /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7350C51C3227300084EB9C /* TwoViewController.m */; };
 		7A7350C91C3227A50084EB9C /* TwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7350C81C3227A50084EB9C /* TwoModel.m */; };
 		7A7350CC1C3227B70084EB9C /* TwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */; };
+		7AD709F01C323049001C5CC1 /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD709EF1C323049001C5CC1 /* FiveViewController.m */; };
+		7AD709F31C323430001C5CC1 /* FiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD709F21C323430001C5CC1 /* FiveTableViewCell.m */; };
 		7AF8C36C1C32268600085C11 /* file.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8C36B1C32268600085C11 /* file.plist */; };
 		7AF8C36F1C3226A600085C11 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8C36E1C3226A600085C11 /* FourViewController.m */; };
 		7AF8C3721C322DE300085C11 /* FourTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8C3711C322DE300085C11 /* FourTableViewCell.m */; };
 		7AF8C3751C32354800085C11 /* FourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8C3741C32354800085C11 /* FourModel.m */; };
+
+		7AFDE8801C3269D30049CF67 /* FiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDE87F1C3269D30049CF67 /* FiveModel.m */; };
+
+
 		B07F2FB3EB6AF8B0865F3902 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6993B875FC6C93EA649AA71E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +162,18 @@
 		7A0C480C1C32229500E68053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0C48121C3222B300E68053 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		7A0C48131C3222B300E68053 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+
+
+		7AD709EE1C323049001C5CC1 /* FiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewController.h; sourceTree = "<group>"; };
+		7AD709EF1C323049001C5CC1 /* FiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
+		7AD709F11C323430001C5CC1 /* FiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveTableViewCell.h; sourceTree = "<group>"; };
+		7AD709F21C323430001C5CC1 /* FiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveTableViewCell.m; sourceTree = "<group>"; };
+		7AF8C36B1C32268600085C11 /* file.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = file.plist; sourceTree = "<group>"; };
+		7AF8C36D1C3226A600085C11 /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		7AF8C36E1C3226A600085C11 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		7AFDE87E1C3269D30049CF67 /* FiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveModel.h; sourceTree = "<group>"; };
+		7AFDE87F1C3269D30049CF67 /* FiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveModel.m; sourceTree = "<group>"; };
+
 		7A0C48181C3229F900E68053 /* OneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTableViewCell.h; sourceTree = "<group>"; };
 		7A0C48191C3229F900E68053 /* OneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTableViewCell.m; sourceTree = "<group>"; };
 		7A0C481B1C322A0A00E68053 /* OneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneModel.h; sourceTree = "<group>"; };
@@ -277,6 +295,10 @@
 		7A7350C81C3227A50084EB9C /* TwoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoModel.m; sourceTree = "<group>"; };
 		7A7350CA1C3227B70084EB9C /* TwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTableViewCell.h; sourceTree = "<group>"; };
 		7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTableViewCell.m; sourceTree = "<group>"; };
+		7AD709EE1C323049001C5CC1 /* FiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewController.h; sourceTree = "<group>"; };
+		7AD709EF1C323049001C5CC1 /* FiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
+		7AD709F11C323430001C5CC1 /* FiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveTableViewCell.h; sourceTree = "<group>"; };
+		7AD709F21C323430001C5CC1 /* FiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveTableViewCell.m; sourceTree = "<group>"; };
 		7AF8C36B1C32268600085C11 /* file.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = file.plist; sourceTree = "<group>"; };
 		7AF8C36D1C3226A600085C11 /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		7AF8C36E1C3226A600085C11 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
@@ -284,6 +306,9 @@
 		7AF8C3711C322DE300085C11 /* FourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourTableViewCell.m; sourceTree = "<group>"; };
 		7AF8C3731C32354800085C11 /* FourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourModel.h; sourceTree = "<group>"; };
 		7AF8C3741C32354800085C11 /* FourModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourModel.m; sourceTree = "<group>"; };
+		7AFDE87E1C3269D30049CF67 /* FiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveModel.h; sourceTree = "<group>"; };
+		7AFDE87F1C3269D30049CF67 /* FiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveModel.m; sourceTree = "<group>"; };
+
 		F784EC014EAA2C277EDD02F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -344,6 +369,12 @@
 				7A0C48051C32229400E68053 /* AppDelegate.m */,
 				7A0C48121C3222B300E68053 /* OneViewController.h */,
 				7A0C48131C3222B300E68053 /* OneViewController.m */,
+				7AD709EE1C323049001C5CC1 /* FiveViewController.h */,
+				7AD709EF1C323049001C5CC1 /* FiveViewController.m */,
+				7AD709F11C323430001C5CC1 /* FiveTableViewCell.h */,
+				7AD709F21C323430001C5CC1 /* FiveTableViewCell.m */,
+				7AFDE87E1C3269D30049CF67 /* FiveModel.h */,
+				7AFDE87F1C3269D30049CF67 /* FiveModel.m */,
 				7A0C48181C3229F900E68053 /* OneTableViewCell.h */,
 				7A0C48191C3229F900E68053 /* OneTableViewCell.m */,
 				7A0C481B1C322A0A00E68053 /* OneModel.h */,
@@ -356,6 +387,8 @@
 				7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */,
 				019EF9151C3260BD001C551A /* 聂欣欣 */,
 				7A0C481E1C323A0100E68053 /* icons */,
+
+
 				7A0C48071C32229400E68053 /* Assets.xcassets */,
 				7A0C48091C32229500E68053 /* LaunchScreen.storyboard */,
 				7A0C480C1C32229500E68053 /* Info.plist */,
@@ -753,6 +786,9 @@
 				019EF91D1C3260BD001C551A /* ThreeTableViewCell.m in Sources */,
 				7A7350C61C3227300084EB9C /* TwoViewController.m in Sources */,
 				7A0C48031C32229400E68053 /* main.m in Sources */,
+				7AD709F01C323049001C5CC1 /* FiveViewController.m in Sources */,
+				7AFDE8801C3269D30049CF67 /* FiveModel.m in Sources */,
+				7AD709F31C323430001C5CC1 /* FiveTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +892,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProjectOne/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhangli.ProjectOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -868,6 +905,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProjectOne/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhangli.ProjectOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";

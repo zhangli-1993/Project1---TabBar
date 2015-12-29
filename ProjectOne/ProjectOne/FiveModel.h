@@ -1,5 +1,5 @@
 //
-//  OneModel.h
+//  FiveModel.h
 //  ProjectOne
 //
 //  Created by scjy on 15/12/29.
@@ -8,16 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OneModel : NSObject
-@property(nonatomic, retain) NSString *title1;
-@property(nonatomic, retain) NSString *title2;
-@property(nonatomic, retain) NSString *image;
+@interface FiveModel : NSObject
+@property(nonatomic, retain) NSString *title;
+@property(nonatomic, retain) NSString *subtitle;
 @property(nonatomic, retain) NSString *time;
-@property(nonatomic, retain) NSString *read;
-
+@property(nonatomic, retain) NSString *count;
+@property(nonatomic, retain) NSString *picture;
 
 - (instancetype)initWithDictory:(NSDictionary *)dic;
-
-
-
 @end

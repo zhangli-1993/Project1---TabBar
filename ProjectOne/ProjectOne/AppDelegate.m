@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FiveViewController.h"
 #import "OneViewController.h"
 #import "FourViewController.h"
 #import "TwoViewController.h"
@@ -22,6 +23,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+
+    FiveViewController *fiveVC = [[FiveViewController alloc] init];
+    UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:fiveVC];
+    fiveVC.tabBarItem.title = @"肖楠";
+    fiveVC.tabBarItem.image = [UIImage imageNamed:@"03-loopback.png"];
+
+
     UITabBarController *tab = [[UITabBarController alloc] init];
     OneViewController *oneVC = [[OneViewController alloc] init];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:oneVC];
@@ -42,8 +50,8 @@
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
     two.tabBarItem.title = @"王妍";
     two.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
-    
-    tab.viewControllers = @[nav1, nav4, nav, nav3];
+
+    tab.viewControllers = @[nav1, nav4, nav, nav3, nav5];
     tab.delegate = self;
     self.window.rootViewController = tab;
     

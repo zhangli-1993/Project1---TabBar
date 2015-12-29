@@ -20,12 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.title = @"军迷在线";
+    self.navigationItem.title = @"军迷在线";
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.separatorColor = [UIColor cyanColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 111;
+    self.tableView.rowHeight = self.view.frame.size.width / 5 + 20;
     [self.view addSubview:self.tableView];
     [self configData];
 }
@@ -55,8 +55,12 @@
     cell.model = self.allArray[indexPath.row];
     return cell;
 }
-
-
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return [TwoTableViewCell getHeightWithModel:self.allArray[indexPath.row]];
+//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
