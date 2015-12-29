@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "OneViewController.h"
 #import "FourViewController.h"
+#import "TwoViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,13 +21,41 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    UITabBarController *tab = [[UITabBarController alloc] init];
+    OneViewController *oneVC = [[OneViewController alloc] init];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:oneVC];
+    oneVC.tabBarItem.title = @"张莉";
+    oneVC.tabBarItem.image = [UIImage imageNamed:@"105-piano.png"];
+    
     
     FourViewController *fourVC = [[FourViewController alloc] init];
-    self.window.rootViewController = fourVC;
+    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourVC];
+    fourVC.tabBarItem.title = @"王晓奇";
+    fourVC.tabBarItem.image = [UIImage imageNamed:@"05-shuffle.png"];
+    
+    TwoViewController *two = [[TwoViewController alloc]init];
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
+    two.tabBarItem.title = @"王妍";
+    two.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
+    
+    tab.viewControllers = @[nav1, nav4, nav];
+    tab.delegate = self;
+    self.window.rootViewController = tab;
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    return YES;
+}
+
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

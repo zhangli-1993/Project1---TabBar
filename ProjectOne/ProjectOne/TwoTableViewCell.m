@@ -1,0 +1,89 @@
+//
+//  TwoTableViewCell.m
+//  ProjectOne
+//
+//  Created by SCJY on 15/12/29.
+//  Copyright © 2015年 scjy. All rights reserved.
+//
+
+#import "TwoTableViewCell.h"
+#import "UIImageView+WebCache.h"
+
+#define kWidth [UIScreen mainScreen].bounds.size.width
+
+@interface TwoTableViewCell()
+@property(nonatomic, retain) UIImageView *imageViewTwo;
+@property(nonatomic, retain) UILabel *title;
+@property(nonatomic, retain) UILabel *content;
+@property(nonatomic, retain) UILabel *date;
+@property(nonatomic, retain) UILabel *readerts;
+
+@end
+@implementation TwoTableViewCell
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self loading];
+    }
+    return self;
+}
+
+- (void)loading{
+    [self addSubview:self.imageViewTwo];
+    [self addSubview:self.title];
+    [self addSubview:self.content];
+    [self addSubview:self.date];
+    [self addSubview:self.readerts];
+}
+
+- (UIImageView *)imageViewTwo{
+    if (_imageViewTwo == nil) {
+        self.imageViewTwo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kWidth / 4, kWidth / 4)];
+        self.imageViewTwo.backgroundColor = [UIColor orangeColor];
+     }
+    return _imageViewTwo;
+}
+
+- (UILabel *)title{
+    if (_title == nil) {
+        self.title = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 4, 0, kWidth / 4 * 3, kWidth / 4 / 3)];
+        self.title.backgroundColor = [UIColor blackColor];
+    }
+    return _title;
+}
+- (UILabel *)date{
+    if (_date == nil) {
+        self.date = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 4, kWidth / 4 / 3, kWidth / 4 * 3 / 2, kWidth / 4 / 3)];
+        self.date.backgroundColor = [UIColor cyanColor];
+    }
+    return _date;
+}
+
+- (UILabel *)readerts{
+    if (_readerts == nil) {
+        self.readerts = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 8 * 5, kWidth / 4 / 3, kWidth / 4 * 3 / 2, kWidth / 4 / 3)];
+        self.readerts.backgroundColor = [UIColor grayColor];
+    }
+    return _readerts;
+}
+- (UILabel *)content{
+    if (_content == nil) {
+        self.content = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 4, kWidth / 4 / 3 * 2, kWidth / 4 * 3, kWidth / 4 / 3)];
+        self.content.backgroundColor = [UIColor redColor];
+    }
+    return _content;
+}
+- (void)setModel:(TwoModel *)model{
+    
+}
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end
