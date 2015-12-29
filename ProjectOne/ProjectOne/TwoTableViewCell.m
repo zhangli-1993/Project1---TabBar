@@ -45,26 +45,26 @@
 
 - (UILabel *)title{
     if (_title == nil) {
-        self.title = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, 0, kWidth / 5 * 4, kWidth / 5 / 2)];
+        self.title = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, 0, kWidth / 5 * 4, kWidth / 5 / 3)];
     }
     return _title;
 }
 - (UILabel *)date{
     if (_date == nil) {
-        self.date = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, kWidth / 5 / 2, kWidth / 5 * 2, kWidth / 5 / 2)];
+        self.date = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, kWidth / 5 / 3, kWidth / 5 * 2, kWidth / 5 / 3)];
     }
     return _date;
 }
 
 - (UILabel *)readerts{
     if (_readerts == nil) {
-        self.readerts = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5 * 3, kWidth / 5 / 2, kWidth / 5 * 2, kWidth / 5 / 2)];
+        self.readerts = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5 * 3, kWidth / 5 / 3, kWidth / 5 * 2, kWidth / 5 / 3)];
     }
     return _readerts;
 }
 - (UILabel *)content{
     if (_content == nil) {
-        self.content = [[UILabel alloc]initWithFrame:CGRectMake(0, kWidth / 5, kWidth , kWidth / 4 / 3)];
+        self.content = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, kWidth / 5 / 3 * 2, kWidth / 5 * 4 , kWidth / 5 / 3)];
         self.content.numberOfLines = 0;
         self.content.font = [UIFont systemFontOfSize:15.0];
         self.content.textColor = [UIColor grayColor];
@@ -74,9 +74,9 @@
 - (void)setModel:(TwoModel *)model{
     self.title.text = model.title;
     self.content.text = model.content;
-    CGRect frame = self.content.frame;
-    frame.size.height = [[self class]getHeightWithText:model.content];
-    self.content.frame = frame;
+//    CGRect frame = self.content.frame;
+//    frame.size.height = [[self class]getHeightWithText:model.content];
+//    self.content.frame = frame;
     self.readerts.text = model.reader;
     [self.imageViewTwo sd_setImageWithURL:[NSURL URLWithString:model.image]];
     
@@ -98,15 +98,15 @@
    
 }
 
-+ (CGFloat)getHeightWithText:(NSString *)text{
-    CGRect rect = [text boundingRectWithSize:CGSizeMake(kWidth, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15.0]} context:nil];
-    return rect.size.height;
-}
-
-+ (CGFloat) getHeightWithModel:(TwoModel *)model{
-    return kWidth / 5 + [[self class]getHeightWithText:model.content];
-}
-
+//+ (CGFloat)getHeightWithText:(NSString *)text{
+//    CGRect rect = [text boundingRectWithSize:CGSizeMake(kWidth, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15.0]} context:nil];
+//    return rect.size.height;
+//}
+//
+//+ (CGFloat) getHeightWithModel:(TwoModel *)model{
+//    return kWidth / 5 + [[self class]getHeightWithText:model.content];
+//}
+//
 - (void)awakeFromNib {
     // Initialization code
 }

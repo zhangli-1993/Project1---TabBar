@@ -15,7 +15,7 @@
         self.cTime = dic[@"CTIME"];
         self.date = dic[@"date"];
         self.title = dic[@"title"];
-        self.content = dic[@"content168"];
+        self.content = dic[@"sourcename"];
         self.image = dic[@"imglink"];
         self.reader = dic[@"readarts"];
     }
