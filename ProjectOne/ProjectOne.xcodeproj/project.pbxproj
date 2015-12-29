@@ -12,7 +12,8 @@
 		7A0C48081C32229400E68053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C48071C32229400E68053 /* Assets.xcassets */; };
 		7A0C480B1C32229500E68053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C48091C32229500E68053 /* LaunchScreen.storyboard */; };
 		7A0C48141C3222B300E68053 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C48131C3222B300E68053 /* OneViewController.m */; };
-		7A7350C31C3224A60084EB9C /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7A7350C21C3224A60084EB9C /* File */; };
+		7AF8C36C1C32268600085C11 /* file.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8C36B1C32268600085C11 /* file.plist */; };
+		7AF8C36F1C3226A600085C11 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8C36E1C3226A600085C11 /* FourViewController.m */; };
 		B07F2FB3EB6AF8B0865F3902 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6993B875FC6C93EA649AA71E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +29,9 @@
 		7A0C480C1C32229500E68053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0C48121C3222B300E68053 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		7A0C48131C3222B300E68053 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
-		7A7350C21C3224A60084EB9C /* File */ = {isa = PBXFileReference; lastKnownFileType = file; path = File; sourceTree = "<group>"; };
+		7AF8C36B1C32268600085C11 /* file.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = file.plist; sourceTree = "<group>"; };
+		7AF8C36D1C3226A600085C11 /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		7AF8C36E1C3226A600085C11 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		F784EC014EAA2C277EDD02F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,11 +68,13 @@
 		7A0C48001C32229400E68053 /* ProjectOne */ = {
 			isa = PBXGroup;
 			children = (
+				7AF8C36B1C32268600085C11 /* file.plist */,
+				7AF8C36D1C3226A600085C11 /* FourViewController.h */,
+				7AF8C36E1C3226A600085C11 /* FourViewController.m */,
 				7A0C48041C32229400E68053 /* AppDelegate.h */,
 				7A0C48051C32229400E68053 /* AppDelegate.m */,
 				7A0C48121C3222B300E68053 /* OneViewController.h */,
 				7A0C48131C3222B300E68053 /* OneViewController.m */,
-				7A7350C21C3224A60084EB9C /* File */,
 				7A0C48071C32229400E68053 /* Assets.xcassets */,
 				7A0C48091C32229500E68053 /* LaunchScreen.storyboard */,
 				7A0C480C1C32229500E68053 /* Info.plist */,
@@ -163,9 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF8C36C1C32268600085C11 /* file.plist in Resources */,
 				7A0C48081C32229400E68053 /* Assets.xcassets in Resources */,
 				7A0C480B1C32229500E68053 /* LaunchScreen.storyboard in Resources */,
-				7A7350C31C3224A60084EB9C /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +231,7 @@
 			files = (
 				7A0C48141C3222B300E68053 /* OneViewController.m in Sources */,
 				7A0C48061C32229400E68053 /* AppDelegate.m in Sources */,
+				7AF8C36F1C3226A600085C11 /* FourViewController.m in Sources */,
 				7A0C48031C32229400E68053 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
