@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019EF91C1C3260BD001C551A /* ThreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 019EF9171C3260BD001C551A /* ThreeModel.m */; };
+		019EF91D1C3260BD001C551A /* ThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019EF9191C3260BD001C551A /* ThreeTableViewCell.m */; };
+		019EF91E1C3260BD001C551A /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019EF91B1C3260BD001C551A /* ThreeViewController.m */; };
 		7A0C48031C32229400E68053 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C48021C32229400E68053 /* main.m */; };
 		7A0C48061C32229400E68053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C48051C32229400E68053 /* AppDelegate.m */; };
 		7A0C48081C32229400E68053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C48071C32229400E68053 /* Assets.xcassets */; };
@@ -136,6 +139,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019EF9161C3260BD001C551A /* ThreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeModel.h; sourceTree = "<group>"; };
+		019EF9171C3260BD001C551A /* ThreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeModel.m; sourceTree = "<group>"; };
+		019EF9181C3260BD001C551A /* ThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeTableViewCell.h; sourceTree = "<group>"; };
+		019EF9191C3260BD001C551A /* ThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeTableViewCell.m; sourceTree = "<group>"; };
+		019EF91A1C3260BD001C551A /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		019EF91B1C3260BD001C551A /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		2CE4272E06F9D9020530F403 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6993B875FC6C93EA649AA71E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0C47FE1C32229400E68053 /* ProjectOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +299,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019EF9151C3260BD001C551A /* 聂欣欣 */ = {
+			isa = PBXGroup;
+			children = (
+				019EF9161C3260BD001C551A /* ThreeModel.h */,
+				019EF9171C3260BD001C551A /* ThreeModel.m */,
+				019EF9181C3260BD001C551A /* ThreeTableViewCell.h */,
+				019EF9191C3260BD001C551A /* ThreeTableViewCell.m */,
+				019EF91A1C3260BD001C551A /* ThreeViewController.h */,
+				019EF91B1C3260BD001C551A /* ThreeViewController.m */,
+			);
+			path = "聂欣欣";
+			sourceTree = "<group>";
+		};
 		7A0C47F51C32229400E68053 = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +354,7 @@
 				7A7350C81C3227A50084EB9C /* TwoModel.m */,
 				7A7350CA1C3227B70084EB9C /* TwoTableViewCell.h */,
 				7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */,
+				019EF9151C3260BD001C551A /* 聂欣欣 */,
 				7A0C481E1C323A0100E68053 /* icons */,
 				7A0C48071C32229400E68053 /* Assets.xcassets */,
 				7A0C48091C32229500E68053 /* LaunchScreen.storyboard */,
@@ -717,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0C481D1C322A0A00E68053 /* OneModel.m in Sources */,
+				019EF91E1C3260BD001C551A /* ThreeViewController.m in Sources */,
 				7A7350CC1C3227B70084EB9C /* TwoTableViewCell.m in Sources */,
 				7A0C48141C3222B300E68053 /* OneViewController.m in Sources */,
 				7AF8C3751C32354800085C11 /* FourModel.m in Sources */,
@@ -724,7 +748,9 @@
 				7A0C48061C32229400E68053 /* AppDelegate.m in Sources */,
 				7A7350C91C3227A50084EB9C /* TwoModel.m in Sources */,
 				7AF8C36F1C3226A600085C11 /* FourViewController.m in Sources */,
+				019EF91C1C3260BD001C551A /* ThreeModel.m in Sources */,
 				7A0C481A1C3229F900E68053 /* OneTableViewCell.m in Sources */,
+				019EF91D1C3260BD001C551A /* ThreeTableViewCell.m in Sources */,
 				7A7350C61C3227300084EB9C /* TwoViewController.m in Sources */,
 				7A0C48031C32229400E68053 /* main.m in Sources */,
 			);

@@ -10,6 +10,7 @@
 #import "OneViewController.h"
 #import "FourViewController.h"
 #import "TwoViewController.h"
+#import "ThreeViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,10 @@
     oneVC.tabBarItem.title = @"张莉";
     oneVC.tabBarItem.image = [UIImage imageNamed:@"105-piano.png"];
     
+    ThreeViewController *threeVC = [[ThreeViewController alloc] init];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:threeVC];
+    threeVC.tabBarItem.title = @"聂欣欣";
+    threeVC.tabBarItem.image = [UIImage imageNamed:@"08-chat.png"];
     
     FourViewController *fourVC = [[FourViewController alloc] init];
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourVC];
@@ -38,7 +43,7 @@
     two.tabBarItem.title = @"王妍";
     two.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
     
-    tab.viewControllers = @[nav1, nav4, nav];
+    tab.viewControllers = @[nav1, nav4, nav, nav3];
     tab.delegate = self;
     self.window.rootViewController = tab;
     

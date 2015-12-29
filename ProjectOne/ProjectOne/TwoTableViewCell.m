@@ -38,55 +38,75 @@
 
 - (UIImageView *)imageViewTwo{
     if (_imageViewTwo == nil) {
-        self.imageViewTwo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kWidth / 4, kWidth / 4)];
+        self.imageViewTwo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kWidth / 5, kWidth / 5)];
      }
     return _imageViewTwo;
 }
 
 - (UILabel *)title{
     if (_title == nil) {
-        self.title = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 4, 0, kWidth / 4 * 3, kWidth / 4 / 3)];
+        self.title = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, 0, kWidth / 5 * 4, kWidth / 5 / 2)];
     }
     return _title;
 }
 - (UILabel *)date{
     if (_date == nil) {
-        self.date = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 4, kWidth / 4 / 3, kWidth / 4 * 3 / 2, kWidth / 4 / 3)];
+        self.date = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5, kWidth / 5 / 2, kWidth / 5 * 2, kWidth / 5 / 2)];
     }
     return _date;
 }
 
 - (UILabel *)readerts{
     if (_readerts == nil) {
-        self.readerts = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 8 * 5, kWidth / 4 / 3, kWidth / 4 * 3 / 2, kWidth / 4 / 3)];
+        self.readerts = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 5 * 3, kWidth / 5 / 2, kWidth / 5 * 2, kWidth / 5 / 2)];
     }
     return _readerts;
 }
 - (UILabel *)content{
     if (_content == nil) {
-        self.content = [[UILabel alloc]initWithFrame:CGRectMake(kWidth / 4, kWidth / 4 / 3 * 2, kWidth / 4 * 3, kWidth / 4 / 3)];
+        self.content = [[UILabel alloc]initWithFrame:CGRectMake(0, kWidth / 5, kWidth , kWidth / 4 / 3)];
+        self.content.numberOfLines = 0;
+        self.content.font = [UIFont systemFontOfSize:15.0];
+        self.content.textColor = [UIColor grayColor];
     }
     return _content;
 }
 - (void)setModel:(TwoModel *)model{
     self.title.text = model.title;
-    NSLog(@"%@", self.title.text);
     self.content.text = model.content;
-    [self.imageViewTwo sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    CGRect frame = self.content.frame;
+    frame.size.height = [[self class]getHeightWithText:model.content];
+    self.content.frame = frame;
     self.readerts.text = model.reader;
+    [self.imageViewTwo sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH-mm-ss"];
     [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/shanghai"]];
-    NSDate *date = [formatter dateFromString:model.date];
+   // NSDate *date = [formatter dateFromString:model.date];
     NSDate *cTime = [formatter dateFromString:model.cTime];
-    NSTimeInterval timeInterval = [cTime timeIntervalSinceDate:date];
-    if (timeInterval > 3600) {
-         self.date.text = [NSString stringWithFormat:@"%.2f小时前", timeInterval /3600];
+    NSTimeInterval timeInterval = [cTime timeIntervalSinceNow] * -1;
+    if (timeInterval > 3600 && timeInterval < 3600 * 24) {
+         self.date.text = [NSString stringWithFormat:@"%.0f小时前", timeInterval /3600];
     }else if (timeInterval <= 3600 && timeInterval >= 60){
-         self.date.text = [NSString stringWithFormat:@"%.2f分钟前", timeInterval /60];
+         self.date.text = [NSString stringWithFormat:@"%.0f分钟前", timeInterval /60];
+    }else if (timeInterval < 60){
+        self.date.text = @"刚刚";
+    }else{
+        self.date.text = [NSString stringWithFormat:@"%.0f天前", timeInterval / 3600 / 24];
     }
    
 }
+
++ (CGFloat)getHeightWithText:(NSString *)text{
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(kWidth, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15.0]} context:nil];
+    return rect.size.height;
+}
+
++ (CGFloat) getHeightWithModel:(TwoModel *)model{
+    return kWidth / 5 + [[self class]getHeightWithText:model.content];
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }
