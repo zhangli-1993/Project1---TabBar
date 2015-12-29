@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "OneViewController.h"
+<<<<<<< HEAD
 #import "FourViewController.h"
+=======
+#import "TwoViewController.h"
+>>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
 @interface AppDelegate ()
 
 @end
@@ -31,8 +35,8 @@
     tab.delegate = self;
     self.window.rootViewController = tab;
     
-    
-    
+    TwoViewController *two = [[TwoViewController alloc]init];
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -12,8 +12,14 @@
 		7A0C48081C32229400E68053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C48071C32229400E68053 /* Assets.xcassets */; };
 		7A0C480B1C32229500E68053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C48091C32229500E68053 /* LaunchScreen.storyboard */; };
 		7A0C48141C3222B300E68053 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C48131C3222B300E68053 /* OneViewController.m */; };
+<<<<<<< HEAD
 		7A0C481A1C3229F900E68053 /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C48191C3229F900E68053 /* OneTableViewCell.m */; };
 		7A0C481D1C322A0A00E68053 /* OneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C481C1C322A0A00E68053 /* OneModel.m */; };
+=======
+		7A7350C61C3227300084EB9C /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7350C51C3227300084EB9C /* TwoViewController.m */; };
+		7A7350C91C3227A50084EB9C /* TwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7350C81C3227A50084EB9C /* TwoModel.m */; };
+		7A7350CC1C3227B70084EB9C /* TwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */; };
+>>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
 		7AF8C36C1C32268600085C11 /* file.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8C36B1C32268600085C11 /* file.plist */; };
 		7AF8C36F1C3226A600085C11 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8C36E1C3226A600085C11 /* FourViewController.m */; };
 		B07F2FB3EB6AF8B0865F3902 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6993B875FC6C93EA649AA71E /* libPods.a */; };
@@ -31,10 +37,19 @@
 		7A0C480C1C32229500E68053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0C48121C3222B300E68053 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		7A0C48131C3222B300E68053 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		7A0C48181C3229F900E68053 /* OneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTableViewCell.h; sourceTree = "<group>"; };
 		7A0C48191C3229F900E68053 /* OneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTableViewCell.m; sourceTree = "<group>"; };
 		7A0C481B1C322A0A00E68053 /* OneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneModel.h; sourceTree = "<group>"; };
 		7A0C481C1C322A0A00E68053 /* OneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneModel.m; sourceTree = "<group>"; };
+=======
+		7A7350C41C3227300084EB9C /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		7A7350C51C3227300084EB9C /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		7A7350C71C3227A50084EB9C /* TwoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoModel.h; sourceTree = "<group>"; };
+		7A7350C81C3227A50084EB9C /* TwoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoModel.m; sourceTree = "<group>"; };
+		7A7350CA1C3227B70084EB9C /* TwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTableViewCell.h; sourceTree = "<group>"; };
+		7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTableViewCell.m; sourceTree = "<group>"; };
+>>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
 		7AF8C36B1C32268600085C11 /* file.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = file.plist; sourceTree = "<group>"; };
 		7AF8C36D1C3226A600085C11 /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		7AF8C36E1C3226A600085C11 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
@@ -81,10 +96,19 @@
 				7A0C48051C32229400E68053 /* AppDelegate.m */,
 				7A0C48121C3222B300E68053 /* OneViewController.h */,
 				7A0C48131C3222B300E68053 /* OneViewController.m */,
+<<<<<<< HEAD
 				7A0C48181C3229F900E68053 /* OneTableViewCell.h */,
 				7A0C48191C3229F900E68053 /* OneTableViewCell.m */,
 				7A0C481B1C322A0A00E68053 /* OneModel.h */,
 				7A0C481C1C322A0A00E68053 /* OneModel.m */,
+=======
+				7A7350C41C3227300084EB9C /* TwoViewController.h */,
+				7A7350C51C3227300084EB9C /* TwoViewController.m */,
+				7A7350C71C3227A50084EB9C /* TwoModel.h */,
+				7A7350C81C3227A50084EB9C /* TwoModel.m */,
+				7A7350CA1C3227B70084EB9C /* TwoTableViewCell.h */,
+				7A7350CB1C3227B70084EB9C /* TwoTableViewCell.m */,
+>>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
 				7A0C48071C32229400E68053 /* Assets.xcassets */,
 				7A0C48091C32229500E68053 /* LaunchScreen.storyboard */,
 				7A0C480C1C32229500E68053 /* Info.plist */,
@@ -239,11 +263,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				7A0C481D1C322A0A00E68053 /* OneModel.m in Sources */,
+=======
+				7A7350CC1C3227B70084EB9C /* TwoTableViewCell.m in Sources */,
+>>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
 				7A0C48141C3222B300E68053 /* OneViewController.m in Sources */,
 				7A0C48061C32229400E68053 /* AppDelegate.m in Sources */,
+				7A7350C91C3227A50084EB9C /* TwoModel.m in Sources */,
 				7AF8C36F1C3226A600085C11 /* FourViewController.m in Sources */,
+<<<<<<< HEAD
 				7A0C481A1C3229F900E68053 /* OneTableViewCell.m in Sources */,
+=======
+				7A7350C61C3227300084EB9C /* TwoViewController.m in Sources */,
+>>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
 				7A0C48031C32229400E68053 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
