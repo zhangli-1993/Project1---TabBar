@@ -7,8 +7,13 @@
 //
 
 #import "FourViewController.h"
+#import "FourTableViewCell.h"
+#import "FourModel.h"
 
-@interface FourViewController ()
+@interface FourViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property(nonatomic, retain) UITableView *tableView;
+@property(nonatomic, retain) NSMutableArray *allArray;
 
 @end
 
@@ -17,6 +22,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.tableView];
+    
+    //解析plist
+    [self configPlist];
+}
+
+- (UITableView *)tableView{
+    if (!_tableView) {
+        self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        self.tableView.separatorColor = [UIColor redColor];
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
+- (void)configPlist{
+     NSString *path = [[NSBundle mainBundle]pathForResource:@"file" ofType:@".plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSDictionary *rootDic = dic[@"root"];
+    NSArray *array = rootDic[@"list"];
+    self.allArray = [NSMutableArray new];
+    for (NSDictionary *obj in array) {
+        FourModel *model = [[FourModel alloc] initWithDictionary:obj];
+        [self.allArray addObject:model];
+    }
+    
+}
+
+#pragma mark --------UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.allArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+ static NSString *cellIdentifier = @"cellIdentifier";
+    FourTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[FourTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    cell.model = self.allArray[indexPath.row];
+    return cell;
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [UIScreen mainScreen].bounds.size.width / 4;
 }
 
 - (void)didReceiveMemoryWarning {
