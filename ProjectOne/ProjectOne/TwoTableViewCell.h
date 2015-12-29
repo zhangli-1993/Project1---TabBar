@@ -10,5 +10,5 @@
 #import "TwoModel.h"
 @interface TwoTableViewCell : UITableViewCell
 @property(nonatomic, retain) TwoModel *model;
-+ (CGFloat) getHeightWithModel:(TwoModel *)model;
+//+ (CGFloat) getHeightWithModel:(TwoModel *)model;
 @end

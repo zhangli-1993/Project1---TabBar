@@ -25,6 +25,7 @@
     self.tableView.separatorColor = [UIColor cyanColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.rowHeight = self.view.frame.size.width / 5 + 20;
     [self.view addSubview:self.tableView];
     [self configData];
 }
@@ -54,9 +55,9 @@
     cell.model = self.allArray[indexPath.row];
     return cell;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [TwoTableViewCell getHeightWithModel:self.allArray[indexPath.row]];
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return [TwoTableViewCell getHeightWithModel:self.allArray[indexPath.row]];
+//}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
