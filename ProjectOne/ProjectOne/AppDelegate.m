@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "OneViewController.h"
+#import "FiveViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
+    FiveViewController *fiveVC = [[FiveViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:fiveVC];
+    self.window.rootViewController = nav;
     
     
     
