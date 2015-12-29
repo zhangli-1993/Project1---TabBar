@@ -89,15 +89,19 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *datestr = [formatter dateFromString:model.time];
-    NSTimeInterval timeInterval = [datestr timeIntervalSinceNow];
-    if (-timeInterval < 60) {
+    NSTimeInterval timeInterval = -[datestr timeIntervalSinceNow];
+    if (timeInterval < 60) {
         self.time.text = @"刚刚";
-    }else if (-timeInterval > 60 && -timeInterval < 3600){
-        NSInteger minute = -timeInterval / 60;
+    }else if (timeInterval > 60 && timeInterval < 3600){
+        NSInteger minute = timeInterval / 60;
         self.time.text = [NSString stringWithFormat:@"%ld分钟之前", minute];
     }else{
-        NSInteger hour = -timeInterval / 3600;
-        self.time.text = [NSString stringWithFormat:@"%ld小时之前", hour];
+        NSInteger hour = timeInterval / 3600;
+        if (hour > 24) {
+            self.time.text = [NSString stringWithFormat:@"%ld天之前", hour / 24];
+        }else{
+            self.time.text = [NSString stringWithFormat:@"%ld小时之前", hour];
+        }
     }
 }
 
