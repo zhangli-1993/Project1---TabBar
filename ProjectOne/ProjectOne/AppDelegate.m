@@ -8,11 +8,11 @@
 
 #import "AppDelegate.h"
 #import "OneViewController.h"
-<<<<<<< HEAD
+
 #import "FourViewController.h"
-=======
+
 #import "TwoViewController.h"
->>>>>>> 517ecee557888a74aa370c243c9d6079b5cef50b
+
 @interface AppDelegate ()
 
 @end
@@ -27,16 +27,23 @@
     OneViewController *oneVC = [[OneViewController alloc] init];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:oneVC];
     oneVC.tabBarItem.title = @"张莉";
+    oneVC.tabBarItem.image = [UIImage imageNamed:@"105-piano.png"];
+    
     
     FourViewController *fourVC = [[FourViewController alloc] init];
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourVC];
     fourVC.tabBarItem.title = @"王晓奇";
-    tab.viewControllers = @[nav1, nav4];
-    tab.delegate = self;
-    self.window.rootViewController = tab;
+    fourVC.tabBarItem.image = [UIImage imageNamed:@"05-shuffle.png"];
     
     TwoViewController *two = [[TwoViewController alloc]init];
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
+    two.tabBarItem.title = @"王妍";
+    two.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
+    
+    tab.viewControllers = @[nav1, nav4, nav];
+    tab.delegate = self;
+    self.window.rootViewController = tab;
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
