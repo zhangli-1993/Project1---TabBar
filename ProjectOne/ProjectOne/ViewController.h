@@ -1,5 +1,5 @@
 //
-//  TwoViewController.h
+//  ViewController.h
 //  ProjectOne
 //
 //  Created by SCJY on 15/12/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwoViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController
 @property(nonatomic, retain) NSDictionary *dictionary;
 @end

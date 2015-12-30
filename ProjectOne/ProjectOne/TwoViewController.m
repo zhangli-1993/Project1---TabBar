@@ -16,7 +16,6 @@
 @end
 
 @implementation TwoViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,26 +26,37 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight = self.view.frame.size.width / 5 + 20;
     [self.view addSubview:self.tableView];
-    [self configData];
+    
+     [self configData];
 }
+
+
+
+
 - (void)configData{
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"file" ofType:@".plist"];
-    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSDictionary *diction = dictionary[@"root"];
+   // NSLog(@"%@", self.dictionary);
+    NSDictionary *diction =self.dictionary[@"root"];
     NSArray *listArray = diction[@"list"];
     self.allArray = [NSMutableArray new];
     for (NSDictionary *dic in listArray) {
+        NSLog(@"%@", dic);
         TwoModel *model = [[TwoModel alloc]initWithDictionary:dic];
         [self.allArray addObject:model];
     }
+    NSLog(@"%@", self.allArray);
 }
 
+
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  
     return self.allArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *str = @"123";
     TwoTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:str];
     if (cell == nil) {
@@ -58,9 +68,9 @@
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    return [TwoTableViewCell getHeightWithModel:self.allArray[indexPath.row]];
 //}
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    return 1;
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

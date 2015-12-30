@@ -72,12 +72,12 @@
     return _content;
 }
 - (void)setModel:(TwoModel *)model{
-    self.title.text = model.title;
-    self.content.text = model.content;
+    self.title.text = [NSString stringWithFormat:@"%@", model.title];
+    self.content.text = [NSString stringWithFormat:@"%@", model.content];;
 //    CGRect frame = self.content.frame;
 //    frame.size.height = [[self class]getHeightWithText:model.content];
 //    self.content.frame = frame;
-    self.readerts.text = model.reader;
+    self.readerts.text = [NSString stringWithFormat:@"%@", model.reader];;
     [self.imageViewTwo sd_setImageWithURL:[NSURL URLWithString:model.image]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];

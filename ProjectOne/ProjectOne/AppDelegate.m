@@ -10,9 +10,8 @@
 #import "FiveViewController.h"
 #import "OneViewController.h"
 #import "FourViewController.h"
-#import "TwoViewController.h"
+#import "ViewController.h"
 #import "ThreeViewController.h"
-
 @interface AppDelegate ()
 
 @end
@@ -23,7 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-
+    
+  
     FiveViewController *fiveVC = [[FiveViewController alloc] init];
     UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:fiveVC];
     fiveVC.tabBarItem.title = @"肖楠";
@@ -46,11 +46,13 @@
     fourVC.tabBarItem.title = @"王晓奇";
     fourVC.tabBarItem.image = [UIImage imageNamed:@"05-shuffle.png"];
     
-    TwoViewController *two = [[TwoViewController alloc]init];
-    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:two];
-    two.tabBarItem.title = @"王妍";
-    two.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
-
+      
+    ViewController *view = [[ViewController alloc]init];
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:view];
+    
+    view.tabBarItem.title = @"王妍";
+    view.tabBarItem.image = [UIImage imageNamed:@"100-coffee.png"];
+    
     tab.viewControllers = @[nav1, nav4, nav, nav3, nav5];
     tab.delegate = self;
     self.window.rootViewController = tab;
@@ -60,6 +62,8 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     return YES;
